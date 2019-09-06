@@ -570,6 +570,9 @@ nzbget_group_id: 0
 ###
 wallabag_available_externally: "false"
 wallabag_data_directory: "{{ docker_home }}/wallabag"
+# If enabling wallabag externally you need to switch the uncomment/comment on the next two lines
+wallabag_env_domain: "http://{{ my_ip }}:7780"
+#wallabag_env_domain: "https://wallabag.{{ ansible_nas_domain }}"
 
 ### Mosquitto
 ###

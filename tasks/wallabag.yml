@@ -17,7 +17,7 @@
     ports:
       - "7780:80"
     env:
-      SYMFONY__ENV__DOMAIN_NAME: "https://wallabag.{{ ansible_nas_domain }}"
+      SYMFONY__ENV__DOMAIN_NAME: "{{ wallabag_env_domain }}"
     restart_policy: unless-stopped
     labels:
       traefik.backend: "wallabag"

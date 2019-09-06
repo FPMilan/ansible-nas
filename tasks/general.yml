@@ -52,3 +52,7 @@
     mode: "u=rwX,g=rwX,o=rX"
     recurse: false
   loop: "{{ samba_shares }}"
+
+- name: "Set IP Address"
+  shell: ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'
+  register: my_ip 
