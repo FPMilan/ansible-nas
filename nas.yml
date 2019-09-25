@@ -136,6 +136,10 @@
     when: (airsonic_enabled | default(False))
     tags: airsonic
 
+  - import_tasks: tasks/booksonic.yml
+    when: (booksonic_enabled | default(False))
+    tags: booksonic
+
   - import_tasks: tasks/cloudflare_ddns.yml
     when: (cloudflare_ddns_enabled | default(False))
     tags: cloudflare_ddns
