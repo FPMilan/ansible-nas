@@ -15,6 +15,7 @@ Ansible config and a bunch of Docker containers.
 * Various media management tools - Sonarr, Sickchill, CouchPotato, Radarr
 * Media streaming via Plex or Emby
 * Music streaming with Airsonic
+* Audiobook streaming with Booksonic
 * An RSS newsfeed reader - Miniflux
 * A Dropbox replacement via Nextcloud
 * Various ways to see stats about your NAS - Glances, dashboards in Grafana
