@@ -4,10 +4,11 @@ By default, applications can be found on the ports listed below.
 
 | Application     | Port   | Notes     |
 |-----------------|--------|-----------|
-| Couchpotato     | 5050   |           |
 | Bitwarden "hub" | 3012   | Web Not.  |
 | Bitwarden       | 19080  | HTTP      |
 | Booksonic       | 4041   |           |
+| Calibre         | 8084   | HTTP      |
+| Couchpotato     | 5050   |           |
 | Duplicati       | 8200   |           |
 | Emby            | 8096   | HTTP      |
 | Emby            | 8920   | HTTPS     |
