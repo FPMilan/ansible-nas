@@ -8,7 +8,7 @@ Booksonic is a free, web-based media streamer, providing ubiquitous access to yo
 
 Set `booksonic_enabled: true` in your `group_vars/all.yml` file.
 
-The Booksonic web interface can be found at http://ansible_nas_host_or_ip:4041.
+The Booksonic web interface can be found at http://ansible_nas_host_or_ip:4041/url-base/index.view.
 
 ## Specific Configuration
 
