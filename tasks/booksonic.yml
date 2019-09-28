@@ -1,0 +1,32 @@
+---
+- name: Create Booksonic Directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    # mode: 0755
+  with_items:
+    - "{{ booksonic_data_directory }}/config"
+
+- name: Booksonic Docker Container
+  docker_container:
+    name: booksonic
+    image: linuxserver/booksonic:latest
+    pull: true
+    volumes:
+      - "{{ booksonic_data_directory }}/config:/config:rw"
+      - "{{ samba_shares_root }}/music/audiobooks:/audiobooks:rw"
+      - "{{ samba_shares_root }}/podcasts:/podcasts:rw"
+    env:
+      PUID: "0"
+      PGID: "0"
+      CONTEXT_PATH: "url-base"
+      TZ: "{{ ansible_nas_timezone }}"
+    ports:
+      - "4041:4040"
+    restart_policy: unless-stopped
+    memory: 1g
+    labels:
+      traefik.backend: "booksonic"
+      traefik.frontend.rule: "Host:booksonic.{{ ansible_nas_domain }}"
+      traefik.enable: "{{ booksonic_available_externally }}"
+      traefik.port: "4041"

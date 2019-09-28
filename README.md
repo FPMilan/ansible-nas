@@ -15,6 +15,7 @@ Ansible config and a bunch of Docker containers.
 * Various media management tools - Sonarr, Sickchill, CouchPotato, Radarr
 * Media streaming via Plex or Emby
 * Music streaming with Airsonic
+* Audiobook streaming with Booksonic
 * An RSS newsfeed reader - Miniflux
 * A Dropbox replacement via Nextcloud
 * Various ways to see stats about your NAS - Glances, dashboards in Grafana
@@ -31,6 +32,7 @@ Ansible config and a bunch of Docker containers.
 
 * [Airsonic](https://airsonic.github.io/) - catalog and stream music
 * [Bitwarden_rs](https://github.com/dani-garcia/bitwarden_rs) - Self-Hosting port of password manager
+* [Booksonic](https://hub.docker.com/r/linuxserver/booksonic/) - catalog and stream your audiobooks and podcasts
 * [Calibre](https://hub.docker.com/r/linuxserver/calibre-web) - eBook Library
 * [Cloudflare DDNS](https://hub.docker.com/r/joshuaavalon/cloudflare-ddns/) - automatically update Cloudflare with your IP address
 * [CouchPotato](https://couchpota.to/) - for downloading and managing movies

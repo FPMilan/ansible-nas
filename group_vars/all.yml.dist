@@ -41,6 +41,7 @@ jackett_enabled: false
 # Music
 airsonic_enabled: false
 mymediaforalexa_enabled: false
+booksonic_enabled: false
 
 # News
 miniflux_enabled: false
@@ -490,6 +491,12 @@ miniflux_admin_password: supersecure
 ###
 airsonic_available_externally: "false"
 airsonic_data_directory: "{{ docker_home }}/airsonic"
+
+###
+### Booksonic
+###
+booksonic_available_externally: "false"
+booksonic_data_directory: "{{ docker_home }}/booksonic"
 
 ###
 ### Watchtower
