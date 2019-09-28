@@ -74,7 +74,8 @@ firefly_enabled: false
 # Wallabag
 wallabag_enabled: false
 
-# MQTT
+# Home Automation
+homeassistant_enabled: true
 mosquitto_enabled: false
 
 # Calibre
@@ -590,6 +591,12 @@ wallabag_data_directory: "{{ docker_home }}/wallabag"
 ###
 mosquitto_available_externally: "false"
 mosquitto_data_directory: "{{ docker_home }}/mosquitto"
+
+###
+### Home Assistant
+###
+homeassistant_available_externally: "false"
+homeassistant_data_directory: "{{ docker_home }}/homeassistant"
 
 ###
 ### Calibre
