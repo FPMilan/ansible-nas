@@ -78,6 +78,9 @@ wallabag_enabled: false
 homeassistant_enabled: true
 mosquitto_enabled: false
 
+# Calibre
+calibre_enabled: false
+
 ###
 ### General
 ###
@@ -137,6 +140,9 @@ music_root: "{{ samba_shares_root }}/music"
 
 # Where podcasts are stored
 podcasts_root: "{{ samba_shares_root }}/podcasts"
+
+# Where your books are stored
+books_root: "{{ samba_shares_root }}/books"
 
 # The description that'll appear next to your Ansible-NAS box when browsing your network
 samba_server_string: Ansible NAS
@@ -206,6 +212,14 @@ samba_shares:
     writable: yes
     browsable: yes
     path: "{{ samba_shares_root }}/photos"
+
+  - name: books
+    comment: 'Books'
+    guest_ok: yes
+    public: yes
+    writable: yes
+    browsable: yes
+    path: "{{ samba_shares_root }}/books"
 
 ###
 ### NFS
@@ -583,3 +597,13 @@ mosquitto_data_directory: "{{ docker_home }}/mosquitto"
 ###
 homeassistant_available_externally: "false"
 homeassistant_data_directory: "{{ docker_home }}/homeassistant"
+
+###
+### Calibre
+###
+calibre_available_externally: "false"
+calibre_data_directory: "{{ docker_home }}/calibre"
+calibre_user_id: 0
+calibre_group_id: 0
+#To disable ebook conversion set calibre_ebook_conversion to "". To enable it set it to "linuxserver/calibre-web:calibre"
+calibre_ebook_conversion: "linuxserver/calibre-web:calibre"
